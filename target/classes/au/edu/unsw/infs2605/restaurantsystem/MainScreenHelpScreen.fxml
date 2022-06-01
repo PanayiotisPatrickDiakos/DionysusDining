@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dialogue" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.restaurantsystem.MasterDialogueController">
+   <children>
+      <ImageView fitHeight="1910.0" fitWidth="893.0" layoutX="-16.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../images/silkBackground.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="292.0" layoutY="399.0" mnemonicParsing="false" onAction="#exit" prefHeight="41.0" prefWidth="80.0" style="-fx-background-color: FFFFFF;" text="Back">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/baseline_arrow_back_black_24dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="232.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../images/DionysusLogo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="306.0" fitWidth="618.0" layoutX="56.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../images/main3.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

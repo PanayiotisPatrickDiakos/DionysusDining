@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customerDialogue" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.restaurantsystem.orderCustomerSelectController">
+   <children>
+      <ImageView fitHeight="1679.0" fitWidth="698.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../images/silkBackground.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="cinemaField" layoutX="344.0" layoutY="171.0" prefHeight="25.0" prefWidth="119.0" promptText="Cinema" style="-fx-background-color: ffffff;" />
+      <TextField fx:id="rowField" layoutX="469.0" layoutY="171.0" prefHeight="25.0" prefWidth="119.0" promptText="Row" style="-fx-background-color: ffffff;" />
+      <TextField fx:id="seatField" layoutX="344.0" layoutY="213.0" prefHeight="25.0" prefWidth="119.0" promptText="Seat" style="-fx-background-color: ffffff;" />
+      <Button fx:id="customerSave" layoutX="428.0" layoutY="289.0" mnemonicParsing="false" onAction="#addCustomerToOrder" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: FFFFFF;" text="Save">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Label layoutX="344.0" layoutY="154.0" text="Cinema Number:" textFill="WHITE" />
+      <TableView fx:id="customerTable" layoutX="14.0" layoutY="14.0" onKeyPressed="#userDidChangeSelection" onMouseClicked="#userDidChangeSelection" prefHeight="354.0" prefWidth="315.0" style="-fx-background-color: ffffff;">
+         <columns>
+            <TableColumn fx:id="customerTableC1" prefWidth="120.80001258850098" text="Cinema" />
+            <TableColumn fx:id="customerTableC2" prefWidth="87.20001220703125" text="Row" />
+            <TableColumn fx:id="customerTableC3" prefWidth="106.39996337890625" text="Seat" />
+         </columns>
+      </TableView>
+      <Label layoutX="469.0" layoutY="154.0" text="Row Letter:" textFill="WHITE" />
+      <Label layoutX="344.0" layoutY="196.0" text="Seat Number:" textFill="WHITE" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="360.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../images/DionysusLogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="409.0" layoutY="93.0" style="-fx-font-weight: 900;" text="Customer" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
