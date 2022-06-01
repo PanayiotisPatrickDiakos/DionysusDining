@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="foodItemDialogue" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.edu.unsw.infs2605.restaurantsystem.FoodItemsController">
+   <children>
+      <ImageView fitHeight="2437.0" fitWidth="942.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../images/silkBackground.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="foodItemUpdate" layoutX="663.0" layoutY="418.0" mnemonicParsing="false" onAction="#updateFoodItem" prefHeight="28.0" prefWidth="90.0" style="-fx-background-color: ffffff;" text="Update">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/baseline_update_black_24dp.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="foodItemDelete" layoutX="569.0" layoutY="418.0" mnemonicParsing="false" onAction="#deleteFoodItem" prefHeight="28.0" prefWidth="90.0" style="-fx-background-color: ffffff;" text="Delete">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/baseline_delete_black_24dp.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TableView fx:id="foodItemTable" layoutX="7.0" layoutY="8.0" onMouseClicked="#userDidChangeSelection" prefHeight="484.0" prefWidth="541.0" style="-fx-background-color: ffffff;">
+         <columns>
+            <TableColumn fx:id="foodItemTableC2" prefWidth="101.5999755859375" text="Name">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../images/baseline_fastfood_black_24dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+            <TableColumn fx:id="foodItemTableC3" prefWidth="64.79998779296875" text="Price">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../images/baseline_attach_money_black_24dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+            <TableColumn fx:id="foodItemTableC4" prefWidth="92.0" text="Category">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../images/baseline_category_black_24dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+            <TableColumn fx:id="foodItemTableC5" prefWidth="189.60003662109375" text="Description">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../images/baseline_description_black_24dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+            <TableColumn fx:id="foodItemTableC6" prefWidth="92.0" text="Availability">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../images/baseline_rule_black_24dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic></TableColumn>
+         </columns>
+      </TableView>
+      <VBox layoutX="569.0" layoutY="119.0" prefHeight="277.0" prefWidth="298.0" spacing="5.0">
+         <children>
+            <Label text="Name" textFill="WHITE" />
+            <TextField fx:id="nameField" style="-fx-background-color: ffffff;" />
+            <Label text="Price" textFill="WHITE" />
+            <TextField fx:id="priceField" style="-fx-background-color: ffffff;" />
+            <Label text="Category" textFill="WHITE" />
+            <HBox prefHeight="22.0" prefWidth="207.0" spacing="5.0">
+               <children>
+                  <ComboBox fx:id="categoryComBox" prefHeight="25.0" prefWidth="230.0" style="-fx-background-color: ffffff;" />
+                  <Button mnemonicParsing="false" onAction="#addFoodCategoryWindow" style="-fx-background-color: ffffff;" text="Add">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../images/baseline_add_black_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </HBox>
+            <Label text="Description" textFill="WHITE" />
+            <TextField fx:id="descriptionField" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: ffffff;" />
+            <Label text="Availability" textFill="WHITE" />
+            <ComboBox fx:id="availabilityComBox" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: ffffff;" />
+         </children>
+      </VBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="608.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../images/DionysusLogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="650.0" layoutY="83.0" style="-fx-font-weight: 900;" text="Food Item" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="foodItemSave" layoutX="776.0" layoutY="418.0" mnemonicParsing="false" onAction="#addFoodItem" prefHeight="17.0" prefWidth="90.0" style="-fx-background-color: ffffff;" text="Save">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/baseline_save_black_24dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="checkEmptyLabel" layoutX="569.0" layoutY="396.0" textFill="WHITE" />
+      <Button layoutX="793.0" layoutY="468.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="28.0" prefWidth="73.0" style="-fx-background-color: FFFFFF;" text="Exit">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/baseline_arrow_back_black_24dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="717.0" layoutY="468.0" mnemonicParsing="false" onAction="#helpScreen" prefHeight="28.0" prefWidth="73.0" style="-fx-background-color: FFFFFF;" text="Help">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/baseline_help_black_24dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
