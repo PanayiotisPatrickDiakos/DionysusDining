@@ -1,4 +1,4 @@
-# INFS2605 RestaurantSystem JavaFX Project
+# Restaurant Management System - Dionysis Dining
 
 This project is a basic set up for you to start building the JavaFX app for the INFS2605 group assignment.
 
